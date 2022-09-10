@@ -15,3 +15,14 @@ function pay(){
     var hover = document.getElementById('hover')
     hover.style.display = ("block")
 }
+
+
+function share(){
+    var hover = document.querySelector('.hovershare')
+    hover.style.display = ("flex")
+}
+
+function unshare(){
+    var hover = document.querySelector('.hovershare')
+    hover.style.display = ("none")
+}
