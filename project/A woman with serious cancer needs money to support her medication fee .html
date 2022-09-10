@@ -1,0 +1,156 @@
+
+          <!DOCTYPE html>
+            <head>
+              <meta name="keywords" content="fundraising, teenager, money, donate, charity">
+              <title>A woman with serious cancer needs money to support her medication fee  - We Fund Love</title>
+          
+              <link rel="stylesheet" href="../fundraiserPage.css">
+              <link rel="stylesheet" href="../style.css"> 
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+              <link rel="icon" type="image/x-icon" href="../favicon.png">
+          
+            </head>
+            <body>
+          
+              <nav class="flex nav-flex">
+                <div class="flex flex-left">
+                  <a href='../index.html'>
+                    <img class='nav_logo' src="../WeFundLove.png">
+                
+                  </a>
+                </div>
+          
+                <div class="flex flex-middle">
+                  <div class="search-bar flex">
+                    <button onclick='search()' class="searchBtn">🔍</button>
+                    <input class="search-input" placeholder="search">
+                  </div>  
+                </div>
+          
+                <div class="flex flex-right">
+                  <a href="../usersupport.html">Learn more</a>
+                  <a>Setting</a>
+                  <a href="../login.html">Account</a>
+                  <a class="nav-createBtn" href='../create.html'>Create</a>
+                </div>
+              </nav>
+          
+            
+              <main class="main">
+                  <div class="banner">
+                      <img class="banner_img" src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                      <div class="donStatus">
+                           <h1>57%</h1>
+                           <p>42825 out of 75341 goal</p>
+                           <button class="bigBtn donateBtn" onclick='pay()'>donate</button>
+                      </div>
+                  </div>
+                  <h1>A woman with serious cancer needs money to support her medication fee </h1>
+                  <p>A woman with serious cancer needs money to support her medication fee and recover from the disease. Please donate for her. <br> She is a woman of forty, of fair complexion and clear, intelligent features, was going in to the hospital for the first time and had decided to have the operation. She had written a long letter to her sister. In it she told her that she was taking the chance. The surgeries and drugs are expensive and she cant afford them without help from others. <br> This is one of many people who are in need of help. Many people are also strugling from diseases like cancer. Please help people like her to recover from disease. Thank you. </p>
+          
+          
+                  <div class="status flex">
+                    <button class="stateBtn moneyBtn">
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      75341 Usd
+                    </button>
+          
+                    <button class="stateBtn likeBtn" onclick='like()'>
+                      <i class="fa-regular fa-heart"></i>
+                      9502
+                    </button>
+        
+                    
+                    <button class='stateBtn shareBtn'>
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </button>
+  
+                    <button class="bigBtn donateAltBtn donateBtn" onclick='pay()'>donate</button>
+                  </div>
+          
+                  
+                  <h3>Comment</h3>
+                  <p><b>user753</b> shjlsdbcaaaaaaaaaaaaa</p>
+                  <p><b>user109</b> You are not alone. Everyone is with you. Stay strong</p>
+                  <p><b>John</b> hey hey hey thankyou for your comments and like!</p>
+                  <h3>Update</h3>
+                  <ul>
+                    <li>This fundraiser had meet 57% of its goal 10 days ago</li>
+                    <li>The fundraiser was created 311 days ago</li>
+                  </ul>
+                  <h3>Contact</h3>
+                  <p>Email: not provided</p>
+                  <p>Phone Number: not provided</p>
+              </main>
+          
+              <div id="hover">
+              <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div id="paypal-button-container"></div>
+                </div>
+              </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'rect',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'paypal',
+                    
+                  },
+          
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+                    });
+                  },
+          
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                      
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          
+                      // Or go to another URL:  actions.redirect('thank_you.html');
+                      
+                    });
+                  },
+          
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
+            </div>
+            
+              <footer class="footer flex">
+                <div class="flex-right">
+                  <a>Contact us</a>
+                  <a>Need help?</a>
+                  <a>Cookie policies</a>
+                </div>
+          
+                <div class="flex-right flex">
+                  <a class="flex">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a class="flex" href="mailto:wefundlove@proton.me">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                </div>
+              </footer>
+          
+              <script src='../fundraiser.js'></script>
+              <script src='../info.js'></script>
+            </body>
+          </html>
