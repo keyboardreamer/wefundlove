@@ -1,0 +1,147 @@
+:root{
+    --bg-color: #ffffff;
+    --greyBg:#f6f6f6;
+    --greyText:#7b7b7b;
+    --text-color:black;
+    --emphasized-color:#55ff7a;
+    --gradient-color-a:#4ffa74;
+    --gradient-color-b:#94f786;
+}
+
+.main{
+    width:1200px;
+    margin: 0px auto;
+    margin-top: 80px;
+}
+
+p{
+    margin-block-start: 0em;
+}
+
+h3{
+    margin-block-end: 0.5em;
+}
+/*--------------------Banner-------------------*/
+
+.banner{
+    display: grid;
+    grid-template-columns: 40% 50%;
+}
+
+.banner_thumbnail{
+    width: 480px;
+    border-radius: 5px;
+    height:260px;
+    object-fit: cover;
+}
+
+.banner_description{
+    margin-left: 20px;
+}
+.bannerBtn{
+    background-color: var(--emphasized-color);
+    padding:8px;
+}
+
+.bannerBtn:hover{
+    background-image:linear-gradient(90deg,var(--gradient-color-a),var(--gradient-color-b));
+}
+
+/*--------------------Recomendation-------------------*/
+.recFundraisers{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.searchResults{
+    display: grid;
+    grid-template-columns:30% 30% 30%;
+}
+
+.nosearchResults{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recFundraiser{
+    margin-right:260px;
+    width:100%;
+}
+
+    .recFundraiser img{
+        height:200px;
+        width:300px;
+        object-fit:cover;
+        border-radius: 5px;
+    }
+
+    .recFundraiser p,h4{
+        margin-block-start: 2px;
+        margin-block-end: 2px;
+    }
+
+/*---------------------Responsive-----------------*/
+
+@media screen and (max-width:1200px) and (min-width:700px){
+    .main{
+        width:700px;
+    }
+
+    .banner{
+        display:block;
+        width:100%;
+    }
+
+    .banner_thumbnail{
+        margin:0px auto;
+    }
+
+    .banner_description{
+        margin:0px auto;
+        width:100%;
+    }
+
+    .banner{
+        grid-template-columns: 30% 60%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .main{
+        width:90%;
+    }
+
+    .banner{
+        display:block;
+        width:80vw;
+    }
+
+    .banner_thumbnail{
+        width:90vw;
+        margin:0px auto;
+    }
+
+    .banner_description{
+        margin:0px auto;
+        width:90vw;
+    }
+    .nav-createBtn{
+        display:block !important;
+    }
+
+    .recFundraisers{
+        display: block;
+    }
+
+    .recFundraiser{
+        float: left;
+        margin-bottom:50px;
+    }
+
+    .recFundraiser img{
+        width:95%;
+    };
+
+}

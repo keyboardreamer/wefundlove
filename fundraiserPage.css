@@ -1,0 +1,111 @@
+
+/*------------------------------banner---------------------*/
+
+.banner{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+    .banner_img{
+        width:100%;
+        height:420px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .donStatus{
+        width:95%;
+        margin-left: 5%;
+        padding-top: 80px;
+        height: 340px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(217, 217, 217,0.4),
+        -5px -5px 10px rgba(217, 217, 217,0.2);
+        text-align: center;
+    }
+
+.stateBtn{
+    margin-right: 20px;
+    border:none;
+    background: none;
+    font-size: 15px;
+    color:black
+}
+
+    .status button:hover{
+        color:rgb(77, 77, 77);
+    }
+
+.tab{
+    margin-top:25px;
+}
+
+   .tab button{
+    font-size: 15px;
+   }
+
+   
+.donateAltBtn{
+    display: none;
+}
+
+/*------------------------------fundraiser---------------------*/
+
+@media screen and (max-width:1100px) and (min-width:700px){
+    .main{
+        width:700px;
+    }
+
+    .banner{
+        display:block;
+    }
+
+    .donStatus{
+        display: none;
+    }
+
+    .donateAltBtn{
+        display: block;
+    }
+}
+
+@media screen and (max-width:700px){
+
+    .banner{
+        display:block;
+    }
+
+    .banner_img{
+        width:90vw;
+        height:auto
+    }
+
+    .donStatus{
+        display: none;
+    }
+
+    .status{
+        display: none;
+    }
+
+    .donateAltBtn{
+        display: block;
+    }
+}
+
+#hover{
+    display: none;
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    padding-top: 20%;
+    width: 100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index: 300;
+}
+
