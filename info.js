@@ -85,7 +85,7 @@ function homeRecomendation(){
     `;
 
     x = 0;
-    var array = [],
+    var array = [];
     while (x < 3){
         var RecNum = Math.floor(Math.random() * all.length);
 
