@@ -116,8 +116,8 @@ function homeRecomendation(){
 var searchbar = document.querySelector(".search-input")
 
 function search(){
-    var listofResult = []
-    all.forEach(data => {
+    var listofResult = [];
+    all.forEach((data) => {
         var word = data.title
         var validity = word.includes(searchbar.value)
         if (validity){
