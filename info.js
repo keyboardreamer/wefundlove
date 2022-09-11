@@ -44,7 +44,7 @@ const all = [
     },{
         title:"HELP HER TO GO TO HAVARD",
         description:"Hi all Kindly help me in raising money for Jessicas college fees. Jessica, a hardworking and honest teenager  and a first-year college student, started her studies in art and literature at havard university this fall. Jessicas parents are always supportive about her education and do their best to support her, but she needs support in closing the financial gap in tuition for her upcoming freshman year. Please donate so that this young lady can pursue her dream of attending university.",
-        thumbnail:"https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1".
+        thumbnail:"https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         creator:"Anna",
         category:"education",
         like:776,
