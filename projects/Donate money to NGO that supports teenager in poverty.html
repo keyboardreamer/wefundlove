@@ -61,7 +61,7 @@
                     </button>
         
                     
-                    <button class='stateBtn shareBtn'>
+                    <button class='stateBtn shareBtn' onclick='share()'>
                       <i class="fa-solid fa-share"></i>
                       share
                     </button>
@@ -134,6 +134,21 @@
             </script>
             </div>
             
+            <div class="hovershare">
+              <button id="sharetwitter" onclick="location.href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fkeyboardreamer.github.io%2Fwefundlove%2F'";>
+                <i class="fa-brands fa-twitter"></i>
+              </button>
+              <button id="sharefacebook" onclick="location.href='https://www.facebook.com/sharer/sharer.php?u=https://keyboardreamer.github.io/wefundlove&quote=Awesome%20Website!'";>
+                <i class="fa-brands fa-facebook"></i>
+              </button>
+              <button id="sharewhatsapp" onclick="location.href='https://wa.me/?text=this%20website%20is%20cool%20https%3A%2F%2Fkeyboardreamer.github.io%2Fwefundlove%2F'";>
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+              <button id="sharewhatsapp" onclick="unshare()";>
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+                      
               <footer class="footer flex">
                 <div class="flex-right">
                   <a>Contact us</a>
