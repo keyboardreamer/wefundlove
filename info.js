@@ -84,8 +84,11 @@ function homeRecomendation(){
     </div>
     `;
 
+//github stop playing with me lah its not funny
+   
     x = 0;
     var array = [];
+
     while (x < 3){
         var RecNum = Math.floor(Math.random() * all.length);
 
