@@ -134,7 +134,7 @@ function search(){
         document.querySelector("main").innerHTML = ``
         document.querySelector("main").classList.remove("nosearchResults")
         document.querySelector("main").classList.add("searchResults")
-        listofResult.forEach(result => {
+        listofResult.forEach((result) => {
             document.querySelector("main").innerHTML += `
             <a class="recFundraiser" href='./projects/${result.title}.html'>
             <img src="${result.thumbnail}">
