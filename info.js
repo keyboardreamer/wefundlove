@@ -1,4 +1,6 @@
 var FOTD = 3;
+const FOTDdiv = document.querySelector(".banner")
+const HomeRecoDiv = document.querySelector(".recFundraisers")
 
 const all = [
     {
@@ -68,9 +70,6 @@ const all = [
 //------------------------------------------home recomendation--------------------------------
 
 if (document.querySelector(".home") != null){
-
-    const FOTDdiv = document.querySelector(".banner")
-const HomeRecoDiv = document.querySelector(".recFundraisers")
 
 function homeRecomendation(){
     FOTDdiv.innerHTML = `
